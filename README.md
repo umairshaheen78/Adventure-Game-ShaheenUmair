@@ -24,7 +24,8 @@ Give me a "reaction" when you are done with these tasks
 If you have questions feel free to ask each other and work as a class
 
 
-### Github Link 
+### Github Link:
+[Umair's Github Code](https://github.com/umairshaheen78/Adventure-Game-ShaheenUmair)
 --------------------------------------------
 How to play this game:
 * You choose between 3 letters: A, B, or C
