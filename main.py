@@ -16,13 +16,13 @@ required = ("\nUse only A, B, or C\n") #Cutting down on duplication
 #The story is broken into sections, starting with "intro"
 def intro():
   print ("After a night out with friends, you awaken the "
-  "next morning in a thick, dank forest. Head spinning and " 
+  "next morning in a thick, dark forest. Head spinning and " 
   "fighting the urge to vomit, you stand and cry at the new and, "
   "unfamiliar setting. The peace quickly fades when you hear a "
-  "loud sound yelling behind you. A huge orca is "
+  "loud sound yelling behind you. A huge orc is "
   "running towards you. You will:")
   time.sleep(1)
-  print ("""  A. Grab a nearby rock and throw it at the orca
+  print ("""  A. Grab a nearby rock and throw it at the orc
   B. Lie down and wait to be eaten
   C. Run """)
   choice = input(">>> ") #Here is your first choice.
@@ -30,7 +30,7 @@ def intro():
     option_rock()
   elif choice in answer_B:
     print ("\nWelp, that was quick. "
-    "\n\nYou died!")
+    "\n\nYou died!\nOther than that... Thanks for playing Umair's Adventure Game!")
   elif choice in answer_C:
     option_run()
   else:
@@ -50,7 +50,7 @@ def option_rock():
   elif choice in answer_B:
     print ("\nYou decided to throw another rock, as if the first " 
     "rock thrown did much damage. The rock flew well over the "
-    "orcs head. You missed. \n\nYou died!")
+    "orcs head. You missed. \n\nYou died!\nOther than that... Thanks for playing Umair's Adventure Game!")
   elif choice in answer_C:
     option_cave()
   else:
@@ -74,7 +74,7 @@ def option_cave():
   if choice in answer_A:
     print ("\nReally? You're going to hide in the dark? I think "
     "orcs can see very well in the dark, right? Not sure, but "
-    "I'm going with YES, so...\n\nYou died!")
+    "I'm going with YES, so...\n\nYou died!\nOther than that... Thanks for playing Umair's Adventure Game!")
   elif choice in answer_B:
    if sword > 0:
     print ("\nYou laid in, so you MUST wait. The shimmering sword attracted "
@@ -84,7 +84,7 @@ def option_cave():
     "its chest. \n\nYou survived!")
    else: #If the user didn't grab the sword
      print ("\nYou should have picked up that sword. You're "
-     "defenseless. \n\nYou died!")
+     "defenseless. \n\nYou died!\nOther than that... Thanks for playing Umair's Adventure Game!")
   elif choice in answer_C:
     print ("As the orc enters the dark cave, you sliently "
     "sneak out. You're several feet away, but the orc turns "
@@ -96,18 +96,18 @@ def option_cave():
 
 def option_run():
   print ("\nYou run as quickly as possible, but the orc's "
-  "speed is too great. You will:")
+  "speed is too fast. You will:")
   time.sleep(1)
-  print ("""  A. Hide behind boulder
+  print ("""  A. Hide behind a boulder
   B. Trapped, so you fight
   C. Run towards an abandoned town""")
   choice = input(">>> ")
   if choice in answer_A:
     print ("You're easily spotted. "
-    "\n\nYou died!")
+    "\n\nYou died!\nOther than that... Thanks for playing Umair's Adventure Game!")
   elif choice in answer_B:
     print ("\nYou're no match for an orc. "
-    "\n\nYou died!")
+    "\n\nYou died!\nOther than that... Thanks for playing Umair's Adventure Game!")
   elif choice in answer_C:
     option_town()
   else:
@@ -120,7 +120,7 @@ def option_town():
   "but miss. You try to calm your heavy breathing as you hide "
   "behind a delapitated building, waiting for the orc to come "
   "charging around the corner. You notice a purple flower "
-  "near your foot. Do you pick it up? Y/N")
+  "near your foot. Do you want to pick it up? Y/N")
   choice = input(">>> ")
   if choice in yes:
     flower = 1 #adds a flower
@@ -131,7 +131,7 @@ def option_town():
   time.sleep(1)
   if flower > 0:
     print ("\nYou quickly hold out the purple flower, somehow "
-    "hoping it will stop the orc. It does! The orc was looking "
+    "hoping it will stop the orc. It does! The orc was just looking "
     "for a hug. "
     "\n\nThings got weird, but you survived! Nice Job!\nOther than that... Thanks for playing Umair's Adventure Game!")
   else: #If the user didn't grab the sword
