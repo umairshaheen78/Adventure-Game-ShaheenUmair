@@ -1,4 +1,4 @@
-import time #Imports the time
+import time #Imports a module to add a pause
 
 #Figuring out how users might respond
 answer_A = ["A", "a"]
@@ -7,7 +7,7 @@ answer_C = ["C", "c"]
 yes = ["Y", "y", "yes"]
 no = ["N", "n", "no"]
 
-#Grabbing the objects
+#Grabbing objects
 sword = 0
 flower = 0
 
@@ -17,20 +17,20 @@ required = ("\nUse only A, B, or C\n") #Cutting down on duplication
 def intro():
   print ("After a night out with friends, you awaken the "
   "next morning in a thick, dark forest. Head spinning and " 
-  "fighting the urge to vomit, you stand and cry at the new and, "
+  "fighting the urge to vomit, you stand and stare at your new, "
   "unfamiliar setting. The peace quickly fades when you hear a "
-  "loud sound yelling behind you. A huge orc is "
+  "loud sound behind you. It's an orc that is "
   "running towards you. You will:")
   time.sleep(1)
   print ("""  A. Grab a nearby rock and throw it at the orc
-  B. Lie down and wait to be eaten
-  C. Run """)
+  B. Lie down and wait to be eaten alove
+  C. Run""")
   choice = input(">>> ") #Here is your first choice.
   if choice in answer_A:
     option_rock()
   elif choice in answer_B:
     print ("\nWelp, that was quick. "
-    "\n\nYou died!\nOther than that... Thanks for playing Umair's Adventure Game!")
+    "\n\nYou died!")
   elif choice in answer_C:
     option_run()
   else:
@@ -50,7 +50,7 @@ def option_rock():
   elif choice in answer_B:
     print ("\nYou decided to throw another rock, as if the first " 
     "rock thrown did much damage. The rock flew well over the "
-    "orcs head. You missed. \n\nYou died!\nOther than that... Thanks for playing Umair's Adventure Game!")
+    "orcs head. You missed. \n\nYou died!")
   elif choice in answer_C:
     option_cave()
   else:
@@ -58,7 +58,8 @@ def option_rock():
     option_rock()
 
 def option_cave():
-  print ("\nYou were hesitant, since the cave was dark. Before you fully enter, you notice a shiny sword on "
+  print ("\nYou were hesitant, since the cave was dark and "
+  "ominous. Before you fully enter, you notice a shiny sword on "
   "the ground. Do you pick up a sword. Y/N?")
   choice = input(">>> ")
   if choice in yes:
@@ -74,17 +75,17 @@ def option_cave():
   if choice in answer_A:
     print ("\nReally? You're going to hide in the dark? I think "
     "orcs can see very well in the dark, right? Not sure, but "
-    "I'm going with YES, so...\n\nYou died!\nOther than that... Thanks for playing Umair's Adventure Game!")
+    "I'm going with YES, so...\n\nYou died!")
   elif choice in answer_B:
    if sword > 0:
-    print ("\nYou laid in, so you MUST wait. The shimmering sword attracted "
+    print (". The shimmering sword attracted "
     "the orc, which thought you were no match. As he walked "
     "closer and closer, your heart beat rapidly. As the orc "
     "reached out to grab the sword, you pierced the blade into "
     "its chest. \n\nYou survived!")
    else: #If the user didn't grab the sword
      print ("\nYou should have picked up that sword. You're "
-     "defenseless. \n\nYou died!\nOther than that... Thanks for playing Umair's Adventure Game!")
+     "defenseless. \n\nYou died!")
   elif choice in answer_C:
     print ("As the orc enters the dark cave, you sliently "
     "sneak out. You're several feet away, but the orc turns "
@@ -93,21 +94,20 @@ def option_cave():
   else:
     print (required)
     option_cave()
-
 def option_run():
   print ("\nYou run as quickly as possible, but the orc's "
   "speed is too fast. You will:")
   time.sleep(1)
-  print ("""  A. Hide behind a boulder
+  print ("""  A. Hide behind boulder
   B. Trapped, so you fight
   C. Run towards an abandoned town""")
   choice = input(">>> ")
   if choice in answer_A:
     print ("You're easily spotted. "
-    "\n\nYou died!\nOther than that... Thanks for playing Umair's Adventure Game!")
+    "\n\nYou died!")
   elif choice in answer_B:
     print ("\nYou're no match for an orc. "
-    "\n\nYou died!\nOther than that... Thanks for playing Umair's Adventure Game!")
+    "\n\nYou died!")
   elif choice in answer_C:
     option_town()
   else:
@@ -120,21 +120,21 @@ def option_town():
   "but miss. You try to calm your heavy breathing as you hide "
   "behind a delapitated building, waiting for the orc to come "
   "charging around the corner. You notice a purple flower "
-  "near your foot. Do you want to pick it up? Y/N")
+  "near your foot. Do you pick it up? Y/N")
   choice = input(">>> ")
   if choice in yes:
     flower = 1 #adds a flower
   else:
     flower = 0
-  print ("You hear its heavy footsteps and prepare yourself for "
-  "the angry orc.")
+  print ("You hear its heavy footsteps and ready yourself for "
+  "the impending orc.")
   time.sleep(1)
   if flower > 0:
     print ("\nYou quickly hold out the purple flower, somehow "
     "hoping it will stop the orc. It does! The orc was just looking "
     "for a hug. "
-    "\n\nThings got weird, but you survived! Nice Job!\nOther than that... Thanks for playing Umair's Adventure Game!")
+    "\n\nThis got weird, but you survived!")
   else: #If the user didn't grab the sword
      print ("\nMaybe you should have picked up the flower. "
-     "\n\nYou died! Oof!\nOther than that... Thanks for playing Umair's Adventure Game!")
+     "\n\nYou died!")
 intro()

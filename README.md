@@ -10,7 +10,7 @@ Once completed, please copy your personal Adventure Game code into the `main.py`
 8. For now, do not write any code inside of the "if statements" besides the print statement
 9. Update the user input so that you do not get stuck with an infinite loop
 
-*Ex*
+*Example*
 ```python
 
 if(userOption == "A"): 
@@ -23,8 +23,9 @@ Give me a "reaction" when you are done with these tasks
 
 If you have questions feel free to ask each other and work as a class
 
-### Github Link:
+## Github Link:
 [Umair's Github Code](https://github.com/umairshaheen78/Adventure-Game-ShaheenUmair)
+
 --------------------------------------------
 How to play this game:
 * You choose between 3 letters: A, B, or C
@@ -39,5 +40,5 @@ Credits:
 * Umair's Dad
 * Mr.Kim
 --------------------------------------
-[Umair Shaheen 2021](https://portfolio-site-template.shaheenumair.repl.co/)
+[Umair Shaheen](https://portfolio-site-template.shaheenumair.repl.co/) 2021
 Python Gaming Creation Center (PGCC)
